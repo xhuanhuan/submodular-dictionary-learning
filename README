@@ -1,0 +1,54 @@
+** This is an example code for the algorithm described in **********************
+
+ Zhuolin Jiang, Guangxiao Zhang, Larry S. Davis.
+
+"Submodular Dictionary Learning for Sparse Coding", CVPR 2012.
+
+********************************************************************************
+
+
+1.Installation
+
+(a) add the toolboxes'ksvdbox' and 'OMPbox' into the matlab path;
+
+  addpath(genpath('./libs/OMPbox'));
+  addpath(genpath('./libs/ksvdbox'));
+
+These toolboxes are downloaded from http://www.cs.technion.ac.il/~ronrubin/software.html
+
+* Please note that you might need to recompile these two toolboxes when you use Linux or
+Mac OS. You can simply run these two files within matlab:
+./libs/OMPbox/private/make.m
+./libs/ksvdbox/private/make.m
+
+(b) You might need recompile the mex file "mex_sers.cpp" from our source codes by running
+ the file 'make.m'. The mex files for WIN64 and WIN32 have been included in the package.
+
+2. Run the code
+
+Just simply run Demo.m.
+
+For this example, we train on randomly selected 30 samples per category and test on the rest.
+The dictionary size 510 is used. We repeat the experiments 10 times and the final results
+are reported as the average of each run. The average recognition accuracy is about 70%.
+
+
+3. Our source codes in the folder "SERS" are based on the sources codes of the paper
+
+M. Liu et al. Entropy Rate Superpixel Segmentation. CVPR 2011.
+
+https://sites.google.com/site/seanmingyuliu/home/research_segmentation
+
+
+
+***********************************************************************************
+
+If you happen to use this source code, please cite our paper:
+
+Zhuolin Jiang, Guangxiao Zhang, Larry S. Davis. " Submodular Dictionary Learning for
+Sparse Coding". IEEE Conference on Computer Vision and Pattern Recognition, 2012.
+
+
+This source code is successfully tested on Windows7 64/32 bits and Matlab R2012b.
+
+For any problems about our source code, please contact me via zhuolin@umiacs.umd.edu
